@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@null">
+
+    <!-- Camera Preview -->
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay with Translucent Black Background -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"> <!-- Translucent Black -->
+
+        <!-- Transparent Square in the Center -->
+        <View
+            android:id="@+id/view_port"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/viewport_border" />
+
+        <!-- Top-left Corner (Red) -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_alignTop="@id/view_port"
+            android:layout_alignStart="@id/view_port"
+            android:background="#FF3B30" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/view_port"
+            android:layout_alignStart="@id/view_port"
+            android:background="#FF3B30" />
+
+        <!-- Top-right Corner (Orange) -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_alignTop="@id/view_port"
+            android:layout_alignEnd="@id/view_port"
+            android:background="#FF9500" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@id/view_port"
+            android:layout_alignEnd="@id/view_port"
+            android:background="#FF9500" />
+
+        <!-- Bottom-left Corner (Blue) -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_alignBottom="@id/view_port"
+            android:layout_alignStart="@id/view_port"
+            android:background="#007AFF" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/view_port"
+            android:layout_alignStart="@id/view_port"
+            android:background="#007AFF" />
+
+        <!-- Bottom-right Corner (Green) -->
+        <View
+            android:layout_width="30dp"
+            android:layout_height="5dp"
+            android:layout_alignBottom="@id/view_port"
+            android:layout_alignEnd="@id/view_port"
+            android:background="#34C759" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="30dp"
+            android:layout_alignBottom="@id/view_port"
+            android:layout_alignEnd="@id/view_port"
+            android:background="#34C759" />
+
+        <!-- Bottom Button -->
+        <Button
+            android:id="@+id/btnCapture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:text="capture"
+            android:focusable="false" />
+    </RelativeLayout>
+</FrameLayout>
+
+
+
+
+
